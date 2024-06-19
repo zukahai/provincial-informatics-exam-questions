@@ -8,5 +8,3 @@ Các bạn có thẻ đóng góp đề thi của các tỉnh mà còn thiếu [T
 
 ## Danh sách đóng góp
 
-- **duchai2712@gmail.com**: đóng góp 36 đề bài 
-- **xinchao1234@gmail.com**: đóng góp 1 đề bài 
