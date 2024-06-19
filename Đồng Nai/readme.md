@@ -1,3 +1,5 @@
-# Đồng Nai
+# Đề Đồng Nai
 
-Nội dung file readme cho tỉnh Đồng Nai.
+Phía trên là các đề thi tỉnh Đồng Nai đã thu thập được, có thể còn nhiều thiếu sót, nếu bạn có đề thi của tỉnh này, hãy đóng góp để mọi người cùng có lợi ích nhé.
+
+Đóng góp đề thi [Tại đây](https://forms.gle/AeP6nuRsy4whT1rF7)

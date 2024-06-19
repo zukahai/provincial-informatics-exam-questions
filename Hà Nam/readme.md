@@ -1,3 +1,5 @@
-# Hà Nam
+# Đề Hà Nam
 
-Nội dung file readme cho tỉnh Hà Nam.
+Phía trên là các đề thi tỉnh Hà Nam đã thu thập được, có thể còn nhiều thiếu sót, nếu bạn có đề thi của tỉnh này, hãy đóng góp để mọi người cùng có lợi ích nhé.
+
+Đóng góp đề thi [Tại đây](https://forms.gle/AeP6nuRsy4whT1rF7)

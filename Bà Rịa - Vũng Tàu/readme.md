@@ -1,3 +1,5 @@
-# Bà Rịa - Vũng Tàu
+# Đề Bà Rịa - Vũng Tàu
 
-Nội dung file readme cho tỉnh Bà Rịa - Vũng Tàu.
+Phía trên là các đề thi tỉnh Bà Rịa - Vũng Tàu đã thu thập được, có thể còn nhiều thiếu sót, nếu bạn có đề thi của tỉnh này, hãy đóng góp để mọi người cùng có lợi ích nhé.
+
+Đóng góp đề thi [Tại đây](https://forms.gle/AeP6nuRsy4whT1rF7)
