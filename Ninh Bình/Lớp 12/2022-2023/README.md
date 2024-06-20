@@ -7,3 +7,6 @@
 - [Ninh Bình - Lớp 12 - 2022-2023.pdf](Ninh%20Bình%20-%20Lớp%2012%20-%202022-2023.pdf)
 Email: duchai2712@gmail.com
 
+- [Ninh Bình - Lớp 12 - 2022-2023 (1).pdf](Ninh%20Bình%20-%20Lớp%2012%20-%202022-2023%20(1).pdf)
+Email: linhptm.21it@vku.udn.vn
+
