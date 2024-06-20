@@ -7,3 +7,6 @@
 - [Thanh Hóa - Lớp 12 - 2021-2022.pdf](Thanh%20Hóa%20-%20Lớp%2012%20-%202021-2022.pdf)
 Email: duchai2712@gmail.com
 
+- [Thanh Hóa - Lớp 12 - 2021-2022 (1).pdf](Thanh%20Hóa%20-%20Lớp%2012%20-%202021-2022%20(1).pdf)
+Email: linhptm.21it@vku.udn.vn
+
