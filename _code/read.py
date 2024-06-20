@@ -5,7 +5,7 @@ import json
 from write_readme import write_readme
 
 # Đường dẫn đến file CSV
-file_path = './_code/' + 'Đóng góp đề thi - Câu trả lời biểu mẫu 1.csv'
+file_path = './_code/' + 'data.csv'
 
 contrubute = {};
 # Đọc file contrubute.json
@@ -22,7 +22,7 @@ for index, row in data.iterrows():
         lop = row['Đề thi dành cho lớp nào?']
         nam = row['Năm tổ chức thi']
         link = row['Đề thi (Nên là file pdf hoặc ảnh)']
-        email = row['Email']
+        email = row['Địa chỉ email']
         print(f'Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}')
 
         path = f'{tinh}/{lop}/{nam}/'
