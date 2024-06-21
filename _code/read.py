@@ -7,7 +7,14 @@ from write_readme import write_readme
 # Đường dẫn đến file CSV
 file_path = './_code/' + 'data.csv'
 
-contrubute = {};
+contrubute = {}
+data_a = []
+
+# Đọc file data.json
+if os.path.exists('./_code/data.json'):
+    with open('./_code/data.json', 'r') as f:
+        data_a = json.loads(f.read())
+
 # Đọc file contrubute.json
 if os.path.exists('./_code/contrubute.json'):
     with open('./_code/contrubute.json', 'r') as f:
@@ -23,6 +30,7 @@ for index, row in data.iterrows():
         nam = row['Năm tổ chức thi']
         link = row['Đề thi (Nên là file pdf hoặc ảnh)']
         email = row['Địa chỉ email']
+
         print(f'Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}')
 
         path = f'{tinh}/{lop}/{nam}/'
@@ -56,11 +64,27 @@ for index, row in data.iterrows():
         else:
             contrubute[email] = 1
 
-        # Lưu contrubute vào file contrubute.json
-        with open('./_code/contrubute.json', 'w') as f:
-            f.write(json.dumps(contrubute))
+        data_a.append({
+            'tinh': tinh,
+            'lop': lop,
+            'nam': nam,
+            'link': link,
+            'email': email,
+            'file': name_file.replace(' ', '%20')
+        })
 
-        write_readme()
+        # sort data_a theo tinh, lop, nam
+        data_a = sorted(data_a, key=lambda x: (x['tinh'], x['lop'], x['nam']))
+
+# Lưu data vào file data.json
+with open('./_code/data.json', 'w') as f:
+    f.write(json.dumps(data_a))
+
+# Lưu contrubute vào file contrubute.json
+with open('./_code/contrubute.json', 'w') as f:
+    f.write(json.dumps(contrubute))
+
+write_readme()
             
 
 

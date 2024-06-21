@@ -5,5 +5,5 @@
 ## Danh sách đề thi
 
 - [Yên Bái - Lớp 12 - 2022-2023.pdf](Yên%20Bái%20-%20Lớp%2012%20-%202022-2023.pdf)
-Email: xinchao1234@gmail.com
+Email: duchai2712@gmail.com
 

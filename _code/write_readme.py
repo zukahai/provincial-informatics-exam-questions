@@ -27,5 +27,18 @@ def write_readme():
         for email, count in contrubute.items():
             f.write(f'- **{email}**: Đóng góp {count} đề bài. \n')
 
+    # đọc data.json viết vào README.md
+    with open('./_code/data.json', 'r') as f:
+        data = json.loads(f.read())
+    
+    with open('./README.md', 'a') as f:
+        f.write('\n\n## Danh sách đề thi\n\n')
+        f.write('| # | Tỉnh | Lớp | Năm | Link | Đóng góp|\n')
+        f.write('| --- | --- | --- | --- | --- | --- |\n')
+        index = 1
+        for item in data:
+            f.write(f'| {index} | {item["tinh"]} | {item["lop"]} | {item["nam"]} | [Link](./{item["file"]}) | {item["email"]}\n')
+            index += 1
+
 if __name__ == '__main__':
     write_readme()
