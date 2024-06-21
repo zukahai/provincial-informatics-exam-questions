@@ -74,9 +74,8 @@ for index, row in data.iterrows():
             'file': path
         })
 
-        data_a = sorted(data_a, key=lambda x: x['nam'], reverse=True)
-        data_a = sorted(data_a, key=lambda x: x['lop'])
-        data_a = sorted(data_a, key=lambda x: x['tinh'])
+        # sắp xếp data tăng dần theo tỉnh, lớp, năm
+        data_a = sorted(data_a, key=lambda x: (x['tinh'], x['lop'], x['nam']))
 
 # Lưu data vào file data.json sig utf-8
 with open('./_code/data.json', 'w') as f:
