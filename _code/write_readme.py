@@ -23,7 +23,7 @@ def write_readme():
 
         sum_ = sum(contrubute.values())
         f.write(readme)
-        f.write(f'Có tổng cộng {sum_} đề thi đã được đóng góp\n\n')
+        f.write(f'Có tổng cộng **{sum_}** đề thi đã được đóng góp\n\n')
         for email, count in contrubute.items():
             f.write(f'- **{email}**: Đóng góp {count} đề bài. \n')
 

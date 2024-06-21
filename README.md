@@ -4,14 +4,14 @@
 
 Phía trên là tổng hợp các đề thi học sinh giỏi tin học của các tỉnh qua các năm. Mình sẽ cập nhật liên tục các đề thi mới nhất. Các bạn có thể xem và tải về để ôn tập.
 
-Các bạn có thẻ đóng góp đề thi của các tỉnh mà còn thiếu [Tại đây](https://forms.gle/AeP6nuRsy4whT1rF7)
+Các bạn có thể đóng góp đề thi của các tỉnh mà còn thiếu **[Tại đây](https://forms.gle/AeP6nuRsy4whT1rF7)**
 
 ## Danh sách đóng góp
 
-Có tổng cộng 98 đề thi đã được đóng góp
+Có tổng cộng **99** đề thi đã được đóng góp
 
 - **linhptm.21it@vku.udn.vn**: Đóng góp 56 đề bài. 
-- **duchai2712@gmail.com**: Đóng góp 38 đề bài. 
+- **duchai2712@gmail.com**: Đóng góp 39 đề bài. 
 - **linhptm@gmail.com**: Đóng góp 4 đề bài. 
 
 
@@ -117,3 +117,4 @@ Có tổng cộng 98 đề thi đã được đóng góp
 | 96 | Đồng Nai | Lớp 12 | 2021-2022 | [Link](./Đồng%20Nai/Lớp%2012/2021-2022/Đồng%20Nai%20-%20Lớp%2012%20-%202021-2022.pdf) | linhptm.21it@vku.udn.vn
 | 97 | Đồng Nai | Lớp 12 | 2022-2023 | [Link](./Đồng%20Nai/Lớp%2012/2022-2023/Đồng%20Nai%20-%20Lớp%2012%20-%202022-2023.pdf) | linhptm.21it@vku.udn.vn
 | 98 | Đồng Nai | Lớp 12 | 2023-2024 | [Link](./Đồng%20Nai/Lớp%2012/2023-2024/Đồng%20Nai%20-%20Lớp%2012%20-%202023-2024.pdf) | linhptm.21it@vku.udn.vn
+| 99 | Đồng Tháp | Lớp 12 | 2022-2023 | [Link](./Đồng%20Tháp/Lớp%2012/2022-2023/Đồng%20Tháp%20-%20Lớp%2012%20-%202022-2023.pdf) | duchai2712@gmail.com
