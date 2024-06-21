@@ -31,7 +31,7 @@ for index, row in data.iterrows():
         link = row['Đề thi (Nên là file pdf hoặc ảnh)']
         email = row['Địa chỉ email']
 
-        print(f'Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}')
+        print(f'{index}. Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}')
 
         path = f'{tinh}/{lop}/{nam}/'
         # Tao thu muc neu chua ton tai
@@ -74,10 +74,11 @@ for index, row in data.iterrows():
             'file': path
         })
 
-        # sort data_a theo tinh, lop, nam
-        data_a = sorted(data_a, key=lambda x: (x['tinh'], x['lop'], x['nam']))
+        data_a = sorted(data_a, key=lambda x: x['nam'], reverse=True)
+        data_a = sorted(data_a, key=lambda x: x['lop'])
+        data_a = sorted(data_a, key=lambda x: x['tinh'])
 
-# Lưu data vào file data.json
+# Lưu data vào file data.json sig utf-8
 with open('./_code/data.json', 'w') as f:
     f.write(json.dumps(data_a))
 
