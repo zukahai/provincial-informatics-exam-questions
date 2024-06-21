@@ -64,13 +64,14 @@ for index, row in data.iterrows():
         else:
             contrubute[email] = 1
 
+        path = path.replace(' ', '%20') + name_file.replace(' ', '%20')
         data_a.append({
             'tinh': tinh,
             'lop': lop,
             'nam': nam,
             'link': link,
             'email': email,
-            'file': name_file.replace(' ', '%20')
+            'file': path
         })
 
         # sort data_a theo tinh, lop, nam
