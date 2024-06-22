@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- DataTables CSS -->
-        <link rel="stylesheet"
-            href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-    </head>
-    <body>
-        <div class="container mt-5">
-            <h2 class="mb-4">Tổng hợp đề thi học sinh giỏi tin học của các
-                tỉnh</h2>
-            <table id="example" class="table table-striped table-bordered"
-                style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Tỉnh</th>
-                        <th>Lớp</th>
-                        <th>Năm học</th>
-                        <th>Link</th>
-                        <th>Đóng góp</th>
-                        <th></th>
-                    </tr>
-                </thead>
-            </table>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</title>
+    <!-- icon -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</h2>
+        
+        <!-- Bộ lọc -->
+        <div class="mb-4">
+            <label>
+                <input type="checkbox" id="filterChecked" /> Đề đã hoàn thành &nbsp;&nbsp;
+            </label>
+            <label>
+                <input type="checkbox" id="filterUnchecked" /> Đề chưa hoàn thành
+            </label>
         </div>
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- DataTables JS -->
-        <script
-            src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-        <script>
-        $(document).ready(function() {
-            $('#example').DataTable({
-                "ajax": {
-                    "url": "data.json",
-                    "dataSrc": function(json) {
-                        // Giả định json là mảng chứa dữ liệu
-                        return json;
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Tỉnh</th>
+                    <th>Lớp</th>
+                    <th>Năm học</th>
+                    <th>Link</th>
+                    <th>Đóng góp</th>
+                    <th>Hoàn thành</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <h3><a href="https://github.com/zukahai/provincial-informatics-exam-questions" target="_blank">Đóng góp thêm đề thi của bạn, mọi người sẽ biết được đề đó là do bạn đóng góp</a></h3>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var table = $('#example').DataTable({
+            "ajax": {
+                "url": "data.json",
+                "dataSrc": function(json) {
+                    // Giả định json là mảng chứa dữ liệu
+                    return json;
+                }
+            },
+            "columns": [
+                { "data": "tinh" },
+                { "data": "lop" },
+                { "data": "nam" },
+                { "data": "link" },
+                { "data": "email" },
+                { "data": null } // Cột này sẽ được custom
+            ],
+            // Định dạng cột link và checkbox
+            "columnDefs": [
+                {
+                    "targets": 3,
+                    "render": function(data, type, row, meta) {
+                        return '<a href="https://github.com/zukahai/provincial-informatics-exam-questions/blob/main/' + row['file'] + '" target="_blank">Xem</a>';
                     }
                 },
-                "columns": [
-                    { "data": "tinh" },
-                    { "data": "lop" },
-                    { "data": "nam" },
-                    { "data": "link" },
-                    { "data": "email" },
-                    { "data": "tinh" },
-
-                ],
-                // Định dạng cột link
-                "columnDefs": [
-                    {
-                        "targets": 3,
-                        "render": function(data, type, row, meta) {
-                            return '<a href="https://github.com/zukahai/provincial-informatics-exam-questions/blob/main/' + row['file'] + '" target="_blank">Xem</a>';
-                        }
-                    },
-                    {
-                        "targets": 5,
-                        "render": function(data, type, row, meta) {
-                            return '<input type="checkbox" name="tinh" value="' + getLocalStorage(row['tinh']) + '" onclick="abc(\''+row['file']+'\')" '+(getLocalStorage(row['file']) == 1 ? 'checked' : '')+'>';
-                        }
+                {
+                    "targets": 5,
+                    "orderable": false, // Không sắp xếp cột này
+                    "searchable": false, // Không tìm kiếm cột này
+                    "className": "text-center", // Căn giữa nội dung
+                    "render": function(data, type, row, meta) {
+                        var isChecked = getLocalStorage(row['file']) == 1 ? 'checked' : '';
+                        return '<input type="checkbox" name="tinh" value="' + getLocalStorage(row['tinh']) + '" onclick="abc(\'' + row['file'] + '\')" ' + isChecked + '>';
                     }
-                ]
-            });
+                }
+            ]
         });
+
+        // Lọc dữ liệu dựa trên trạng thái checkbox
+        $('#filterChecked, #filterUnchecked').on('change', function() {
+            table.draw();
+        });
+
+        $.fn.dataTable.ext.search.push(
+            function(settings, data, dataIndex) {
+                var showChecked = $('#filterChecked').is(':checked');
+                var showUnchecked = $('#filterUnchecked').is(':checked');
+                var file = table.row(dataIndex).data()['file'];
+                var isChecked = getLocalStorage(file) == 1;
+
+                if (showChecked && isChecked) {
+                    return true;
+                }
+                if (showUnchecked && !isChecked) {
+                    return true;
+                }
+                if (!showChecked && !showUnchecked) {
+                    return true;
+                }
+                return false;
+            }
+        );
+    });
 
     function abc(id) {
         let data = localStorage.getItem(id);
@@ -88,5 +125,5 @@
         return 0;
     }
     </script>
-    </body>
+</body>
 </html>
