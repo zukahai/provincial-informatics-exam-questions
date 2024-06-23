@@ -153,6 +153,11 @@
 
         // Lọc dữ liệu dựa trên trạng thái checkbox
         $('#filterChecked, #filterUnchecked').on('change', function() {
+            if (this.id === 'filterChecked') {
+                $('#filterUnchecked').prop('checked', false);
+            } else {
+                $('#filterChecked').prop('checked', false);
+            }
             table.draw();
         });
 
