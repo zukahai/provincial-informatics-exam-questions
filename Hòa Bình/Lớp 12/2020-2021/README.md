@@ -7,3 +7,6 @@
 - [Hòa Bình - Lớp 12 - 2020-2021.pdf](Hòa%20Bình%20-%20Lớp%2012%20-%202020-2021.pdf)
 Email: linhptm.21it@vku.udn.vn
 
+- [Hòa Bình - Lớp 12 - 2020-2021 (1).pdf](Hòa%20Bình%20-%20Lớp%2012%20-%202020-2021%20(1).pdf)
+Email: duchai2712@gmail.com
+
