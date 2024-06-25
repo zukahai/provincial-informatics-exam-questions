@@ -6,8 +6,8 @@ import json
 def write_readme():
     contrubute = {};
     # Đọc file contrubute.json
-    if os.path.exists('./_code/contrubute.json'):
-        with open('./_code/contrubute.json', 'r') as f:
+    if os.path.exists('./_code/genarator/contrubute.json'):
+        with open('./_code/genarator/contrubute.json', 'r') as f:
             contrubute = json.loads(f.read())
             # print(contrubute)
 
@@ -28,7 +28,7 @@ def write_readme():
             f.write(f'- **{email}**: Đóng góp {count} đề bài. \n')
 
     # đọc data.json viết vào README.md
-    with open('./_code/data.json', 'r') as f:
+    with open('./_code/genarator/data.json', 'r') as f:
         data = json.loads(f.read())
     
     with open('./README.md', 'a') as f:

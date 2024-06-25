@@ -1,0 +1,53 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+.container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+}
+.table {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+.table th {
+    background-color: #2c2c2c;
+}
+.table td {
+    background-color: #2c2c2c;
+}
+h2, h3 {
+    color: #ffffff;
+}
+a {
+    color: #1e90ff;
+}
+a:hover {
+    color: #63a4ff;
+}
+.dataTables_wrapper .dataTables_filter label,
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    color: #ffffff;
+}
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #2c2c2c;
+    color: #ffffff !important;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    margin: 2px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #3e3e3e;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #4a4a4a;
+}

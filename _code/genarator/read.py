@@ -5,19 +5,19 @@ import json
 from write_readme import write_readme
 
 # Đường dẫn đến file CSV
-file_path = './_code/' + 'data.csv'
+file_path = './_code/genarator/' + 'data.csv'
 
 contrubute = {}
 data_a = []
 
 # Đọc file data.json
-if os.path.exists('./_code/data.json'):
-    with open('./_code/data.json', 'r') as f:
+if os.path.exists('./_code/genarator/data.json'):
+    with open('./_code/genarator/data.json', 'r') as f:
         data_a = json.loads(f.read())
 
 # Đọc file contrubute.json
-if os.path.exists('./_code/contrubute.json'):
-    with open('./_code/contrubute.json', 'r') as f:
+if os.path.exists('./_code/genarator/contrubute.json'):
+    with open('./_code/genarator/contrubute.json', 'r') as f:
         contrubute = json.loads(f.read())
 
 # Đọc file CSV
@@ -78,11 +78,11 @@ for index, row in data.iterrows():
         data_a = sorted(data_a, key=lambda x: (x['tinh'], x['lop'], x['nam']))
 
 # Lưu data vào file data.json sig utf-8
-with open('./_code/data.json', 'w') as f:
+with open('./_code/genarator/data.json', 'w') as f:
     f.write(json.dumps(data_a))
 
 # Lưu contrubute vào file contrubute.json
-with open('./_code/contrubute.json', 'w') as f:
+with open('./_code/genarator/contrubute.json', 'w') as f:
     f.write(json.dumps(contrubute))
 
 write_readme()
