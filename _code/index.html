@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</title>
-    <!-- icon -->
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</title>
+        <!-- icon -->
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- DataTables CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+        <style>
         body {
             background-color: #121212;
             color: #ffffff;
@@ -65,46 +67,66 @@
             background-color: #4a4a4a;
         }
     </style>
-</head>
-<body>
-    <div class="container mt-5">
-        <h1 class="mb-4 text-center">Tổng hợp đề thi học sinh giỏi tin học của các tỉnh</h1>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="mb-4 text-center">Tổng hợp đề thi học sinh giỏi tin học
+                của các tỉnh</h1>
 
-        
-        <!-- Bộ lọc -->
-        <div class="mb-4 d-flex justify-content-center">
-            <label>
-                <input type="checkbox" id="filterChecked" /> Đề đã hoàn thành &nbsp;&nbsp;
-            </label>
-            <label>
-                <input type="checkbox" id="filterUnchecked" /> Đề chưa hoàn thành
-            </label>
+            <!-- Bộ lọc -->
+            <div class="mb-4 d-flex justify-content-center">
+                <label>
+                    <input type="checkbox" id="filterChecked" /> Đề đã hoàn
+                    thành &nbsp;&nbsp;
+                </label>
+                <label>
+                    <input type="checkbox" id="filterUnchecked" /> Đề chưa hoàn
+                    thành
+                </label>
+            </div>
+
+            <table id="example" class="table table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Tỉnh</th>
+                        <th>Lớp</th>
+                        <th>Năm học</th>
+                        <th>Link</th>
+                        <th>Đóng góp bởi email</th>
+                        <th>Hoàn thành</th>
+                    </tr>
+                </thead>
+            </table>
+            <h3 class="text-center"><a
+                    href="https://github.com/zukahai/provincial-informatics-exam-questions"
+                    target="_blank">Đóng góp thêm đề thi của bạn, mọi người sẽ
+                    biết được đề đó là do bạn đóng góp</a></h3>
         </div>
 
-        <table id="example" class="table table-bordered" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Tỉnh</th>
-                    <th>Lớp</th>
-                    <th>Năm học</th>
-                    <th>Link</th>
-                    <th>Đóng góp bởi email</th>
-                    <th>Hoàn thành</th>
-                </tr>
-            </thead>
-        </table>
-        <h3 class="text-center"><a href="https://github.com/zukahai/provincial-informatics-exam-questions" target="_blank">Đóng góp thêm đề thi của bạn, mọi người sẽ biết được đề đó là do bạn đóng góp</a></h3>
-    </div>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- DataTables JS -->
+        <script
+            src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var url = window.location.href;
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
     $(document).ready(function() {
         var table = $('#example').DataTable({
+            search: {
+                    search: getParameterByName('s')
+            },
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"
             },
@@ -198,5 +220,5 @@
         return 0;
     }
     </script>
-</body>
+    </body>
 </html>
