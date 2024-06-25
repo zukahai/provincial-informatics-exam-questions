@@ -16,7 +16,7 @@ $(document).ready(function () {
             "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"
         },
         "ajax": {
-            "url": "data.json",
+            "url": "./genarator/data.json",
             "dataSrc": function (json) {
                 // Giả định json là mảng chứa dữ liệu
                 return json;
