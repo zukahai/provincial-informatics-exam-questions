@@ -51,3 +51,19 @@ a:hover {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     background-color: #4a4a4a;
 }
+
+.badge .notification {
+    font-size: 0.8em;
+    background-color: #a79d9d;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 90%;
+    margin-left: 2px;
+}
+
+.badge {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

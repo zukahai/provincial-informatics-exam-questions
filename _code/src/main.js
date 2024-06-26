@@ -22,17 +22,19 @@ $(document).ready(function () {
                 result[key] = contributors[key];
                 return result;
             }, {});
-            
+
             var html = '';
             for (key in contributors) {
-                html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
-                html += "&nbsp;";
+                // html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
+                // html += "&nbsp;";
+                // badge notification
+                html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + " <span class='notification'>" + contributors[key] + "</span></span> ";
             }
             $('#contributors').html(html);
         }
     });
 });
-        
+
 
 $(document).ready(function () {
     var table = $('#example').DataTable({
