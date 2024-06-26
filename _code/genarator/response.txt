@@ -1,9 +1,9 @@
 
-Chào [Tên Người Nhận],
+Chào vu.qn23p0778@gmail.com,
 
-Tôi viết thư này để cảm ơn bạn vì đã đóng góp đề thi cho trang web tổng hợp đề thi học sinh giỏi tin học qua các năm. Đóng góp của bạn đã giúp cộng đồng có thêm nguồn tài liệu quý giá.
+Tôi viết thư này để cảm ơn bạn vì đã đóng góp đề thi cho trang web tổng hợp đề thi học sinh giỏi tin học qua các năm. Đóng góp của bạn đã giúp cộng đồng có thêm nguồn tài liệu quý giá. Số lượng đề thi bạn đã đóng góp là 8
 
-Từ bây giờ, mọi người có thể dễ dàng tìm kiếm và xem các đề thi mà bạn đã đóng góp bằng cách truy cập vào liên kết sau: https://pieq.vercel.app/_code/?s=[Tên Người Nhận].
+Từ bây giờ, mọi người có thể dễ dàng tìm kiếm và xem các đề thi mà bạn đã đóng góp bằng cách truy cập vào liên kết sau: https://pieq.vercel.app/_code/?s=vu.qn23p0778@gmail.com
 
 Một lần nữa, xin cảm ơn sự đóng góp của bạn. Chúng tôi rất trân trọng sự hỗ trợ của bạn và hy vọng sẽ tiếp tục nhận được những đóng góp quý báu trong tương lai.
 
