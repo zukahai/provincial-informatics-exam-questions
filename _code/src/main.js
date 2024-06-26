@@ -7,6 +7,25 @@ function getParameterByName(name) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+$(document).ready(function () {
+    $.ajax({
+        url: './genarator/contrubute.json',
+        type: 'GET',
+        success: function (data) {
+            var contributors = data;
+            console.log(contributors);
+            var html = '';
+            for (key in contributors) {
+                html += "<span class='badge badge-dark' title='Đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
+                html += "&nbsp;";
+            }
+            $('#contributors').html(html);
+        }
+    });
+});
+        
+
 $(document).ready(function () {
     var table = $('#example').DataTable({
         search: {
