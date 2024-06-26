@@ -14,7 +14,15 @@ $(document).ready(function () {
         type: 'GET',
         success: function (data) {
             var contributors = data;
-            console.log(contributors);
+
+            // Sắp xếp theo số lượng đề thi giảm dần
+            contributors = Object.keys(contributors).sort(function (a, b) {
+                return contributors[b] - contributors[a];
+            }).reduce(function (result, key) {
+                result[key] = contributors[key];
+                return result;
+            }, {});
+            
             var html = '';
             for (key in contributors) {
                 html += "<span class='badge badge-dark' title='Đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
