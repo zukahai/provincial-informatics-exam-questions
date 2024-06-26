@@ -25,7 +25,7 @@ $(document).ready(function () {
             
             var html = '';
             for (key in contributors) {
-                html += "<span class='badge badge-dark' title='Đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
+                html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
                 html += "&nbsp;";
             }
             $('#contributors').html(html);
