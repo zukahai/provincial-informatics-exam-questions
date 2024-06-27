@@ -28,8 +28,7 @@ $(document).ready(function () {
                 // html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
                 // html += "&nbsp;";
                 // badge notification
-                html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + " <span class='notification'>" + contributors[key] + "</span></span> ";
-            }
+                html += "<span " + "onclick='window.location.href=\"?s=" + key + "\"' " + "style='cursor: pointer;' " + "class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + " <span class='notification'>" + contributors[key] + "</span></span> ";            }
             $('#contributors').html(html);
         }
     });
