@@ -24,14 +24,30 @@ $(document).ready(function () {
             }, {});
 
             var html = '';
+            let count = 0;
             for (key in contributors) {
-                // html += "<span class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + "</span> ";
-                // html += "&nbsp;";
-                // badge notification
+                count += contributors[key];
                 html += "<span " + "onclick='window.location.href=\"?s=" + key + "\"' " + "style='cursor: pointer;' " + "class='badge badge-dark' title='" + key + "\nĐã đóng góp " + contributors[key] + " đề thi'>" + key + " <span class='notification'>" + contributors[key] + "</span></span> ";            }
             $('#contributors').html(html);
+
+            if (new Date().getTime() - localStorage.getItem('time') > 30 * 60 * 1000 || localStorage.getItem('time') == null){
+                $('#count').html("<h5>Hiện tại đã có " + count + " đề thi được đóng góp, đề thi sẽ cập nhật đề thi liên tục</h5>");
+                $('#count').removeClass('hidden');
+                localStorage.setItem('time', new Date().getTime());
+            } else {
+                $('#count').fadeOut();
+                localStorage.setItem('time', new Date().getTime());
+            }
         }
     });
+
+    setTimeout(() => {
+        // ẩn count
+        $('#count').fadeOut();
+    }, 10000);
+
+    // lưu time truy cập
+    
 });
 
 

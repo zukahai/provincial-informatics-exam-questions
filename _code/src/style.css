@@ -67,3 +67,15 @@ a:hover {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+#count {
+    color: #0d2519;
+    background-color: #36ede7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
