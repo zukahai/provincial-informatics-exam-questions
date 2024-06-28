@@ -31,7 +31,7 @@ $(document).ready(function () {
             $('#contributors').html(html);
 
             if (new Date().getTime() - localStorage.getItem('time') > 30 * 60 * 1000 || localStorage.getItem('time') == null){
-                $('#count').html("<h5>Hiện tại đã có " + count + " đề thi được đóng góp, đề thi sẽ cập nhật đề thi liên tục</h5>");
+                $('#count').html("<h5>Hiện tại đã có " + count + " đề thi được đóng góp, đề thi sẽ cập nhật liên tục trên hệ thống</h5>");
                 $('#count').removeClass('hidden');
                 localStorage.setItem('time', new Date().getTime());
             } else {
