@@ -15,6 +15,11 @@ if os.path.exists('./_code/genarator/data.json'):
     with open('./_code/genarator/data.json', 'r') as f:
         data_a = json.loads(f.read())
 
+# Nếu không có trường type thì thêm là PDF
+for item in data_a:
+    if 'type' not in item:
+        item['type'] = 'PDF'
+
 # Đọc file contrubute.json
 if os.path.exists('./_code/genarator/contrubute.json'):
     with open('./_code/genarator/contrubute.json', 'r') as f:
@@ -24,14 +29,17 @@ if os.path.exists('./_code/genarator/contrubute.json'):
 data = pd.read_csv(file_path)
 
 for index, row in data.iterrows():
+    print(row)
     if row['Đã duyệt'] == False:
+        print(row)
         tinh = row['Bạn đang muốn đóng góp đề của tỉnh nào?']
         lop = row['Đề thi dành cho lớp nào?']
         nam = row['Năm tổ chức thi']
-        link = row['Đề thi (Nên là file pdf hoặc ảnh)']
+        link = row['Đề thi (Định dạng PDF hoặc file word)']
         email = row['Địa chỉ email']
+        typeD = row['a']
 
-        print(f'{index}. Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}')
+        print(f'{index}. Tỉnh: {tinh}, Lớp: {lop}, Năm: {nam}, Link: {link}, Loại: {typeD}, Email: {email}')
 
         path = f'{tinh}/{lop}/{nam}/'
         # Tao thu muc neu chua ton tai
@@ -71,7 +79,8 @@ for index, row in data.iterrows():
             'nam': nam,
             'link': link,
             'email': email,
-            'file': path
+            'file': path,
+            'type': typeD
         })
 
         # sắp xếp data tăng dần theo tỉnh, lớp, năm
